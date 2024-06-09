@@ -1,0 +1,13 @@
+python_env: conda.yaml
+# or
+# conda_env: my_env.yaml
+# or
+# docker_env:
+#    image:  mlflow-docker-example
+
+entry_points:
+  main:
+    parameters:
+      train_path: path
+      model_param1: {type: float, default: 0.1}
+    command: "python train.py {train_path} {model_param1}"
